@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Owin.Security.Cookies;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,22 @@ namespace KeystoneDotNet45WebFormsSample
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void login_Click(object sender, EventArgs e)
+        {
+            if (!Request.IsAuthenticated)
+            {
+                HttpContext.Current.GetOwinContext().Authentication.Challenge();
+            }
+        }
+
+        protected void Unnamed_LoggingOut(object sender, EventArgs e)
+        {
+            if (Request.IsAuthenticated)
+            {
+                Context.GetOwinContext().Authentication.SignOut(CookieAuthenticationDefaults.AuthenticationType);
+            }
         }
     }
 }
