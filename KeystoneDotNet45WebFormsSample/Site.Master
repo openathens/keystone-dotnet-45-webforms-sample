@@ -67,6 +67,9 @@
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
+                                    <a runat="server" href="~/Claims">View claims</a>
+                                </li>
+                                <li>
                                     <asp:LoginStatus runat="server"
                                         LogoutAction="Redirect"
                                         LogoutText="Logout"
