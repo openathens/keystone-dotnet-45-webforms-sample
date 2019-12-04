@@ -11,7 +11,7 @@ This is a simple example of using OpenID Connect authentication with OpenAthens 
  (these can be found on the Configuration tab).
 1. If you haven't already done so, create a test personal account in the OpenAthens
  [Identity Provider dashboard](https://admin.openathens.net/).
-1. Run the application and browse to [https://localhost:44332/](https://localhost:43322/)
+1. Run the application and browse to [https://localhost:44332/](https://localhost:44332/)
 1. The `Login` link should take you to OpenAthens; log in with your test personal account and it will take you back to
 your site.
 1. Follow the `View cliams` link to view the OpenID Connect claims associated with your personal account. The one of 
