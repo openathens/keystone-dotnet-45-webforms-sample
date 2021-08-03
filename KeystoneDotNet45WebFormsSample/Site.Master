@@ -14,7 +14,15 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <script>
+      (function(w,a,y,f){
+         w._wayfinder=w._wayfinder||function(){(w._wayfinder.q=w._wayfinder.q||[]).push(arguments)};
+         p={oaDomain:'DOMAIN',oaAppId:'APPLICATION_ID'};
+         w._wayfinder.settings=p;h=a.getElementsByTagName('head')[0];s=a.createElement('script');s.async=1;
+         q=Object.keys(p).map(function(key){return key+'='+p[key]}).join('&');
+         s.src=y+'v1'+f+"?"+q;h.appendChild(s);}
+       )(window,document,'https://wayfinder.openathens.net/embed/','/loader.js');
+    </script>
 </head>
 <body>
     <form runat="server">
@@ -61,6 +69,9 @@
                                     <a runat="server"
                                         href="Site.Master"
                                         onserverclick="login_Click">Login</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="wayfinder-login">Login via Wayfinder</a>
                                 </li>
                             </ul>
                         </AnonymousTemplate>
